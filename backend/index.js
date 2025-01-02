@@ -370,7 +370,10 @@ const app = express();
 const port = process.env.PORT||3001;
 dotenv.config();
 // Set up multer to handle file uploads
-app.use(cors());
+// app.use(cors());
+app.use(cors({
+    origin: 'https://super-ai-assigment-gsc2.vercel.app',
+}));
 app.use(express.json())
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
