@@ -6,7 +6,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'http://localhost:3001', // Backend server URL
+        target: 'https://superai-assigment.onrender.com', // Backend server URL
         changeOrigin: true,
         
       },
