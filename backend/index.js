@@ -407,6 +407,7 @@ function extractColumnNames(filePath) {
   });
 }
 // API endpoint to handle the query and CSV upload
+app.get('/',(req,res)=>{res.send('hello world')})
 app.post("/api/query", upload.single("csvFile"), async(req, res) => {
   console.log("Received a request to /api/query");
   console.log("File:", req.file);
